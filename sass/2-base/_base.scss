@@ -1,0 +1,30 @@
+/*
+  ========================================
+  Custom styles
+  ========================================
+*/
+
+body {
+  background: #fff;
+  color: #000;
+  font: 400 16px "Roboto", Arial, sans-serif;
+}
+
+/*
+  ========================================
+  Container
+  ========================================
+*/
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+  padding-left: 30px;
+  padding-right: 30px
+}
