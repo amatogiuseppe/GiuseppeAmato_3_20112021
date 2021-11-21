@@ -1,0 +1,19 @@
+/*
+  ========================================
+  Buttons
+  ========================================
+*/
+
+.btn-default {
+  width: 220px;
+  height: 50px;
+  border: none;
+  border-radius: 35px;
+  color: #fff;
+  background: $primary-color;
+  background: linear-gradient(to top, $primary-color, $secondary-color);
+  cursor: pointer;
+  &:hover {
+      background: $primary-color;
+    }
+}
