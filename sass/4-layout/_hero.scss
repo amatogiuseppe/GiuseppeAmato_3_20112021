@@ -1,0 +1,102 @@
+/*
+  ========================================
+  Search form
+  ========================================
+*/
+
+.search-form {
+  background-color: #f6f6f6;
+  height: 340px;
+  text-align: center;
+  fieldset {
+    @include central;
+    width: 100%;
+    height: 50px;
+    box-shadow: inset 0px 5px 5px -5px rgb(0, 0, 0, .25);
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: #eaeaea;
+  }
+  &__bar {
+    width: 130px;
+    border: none;
+    outline: none;
+    background-color: #eaeaea;
+    margin-left: 10px;
+    &::placeholder {
+      color: #353535;
+      font-weight: 500;        
+    }
+  }
+  &__title {        
+    padding: 15px 45px 0 45px;
+  }
+  &__description {        
+    font-size: 18px;
+    margin-top: -5px;
+    margin-bottom: 30px;
+    color: #353535;
+  }
+}
+
+/*
+  ========================================
+  Fonctionnement
+  ========================================
+*/
+
+.fonctionnement {
+  height: 400px;  
+  &__title {
+    margin: 45px 0 0 20px;    
+  }
+  &__steps-list {     
+    @include central;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 270px;
+    margin-top: 30px;   
+  }
+}
+
+.step {
+  @include central;
+  width: 87%;
+  height: 75px;
+  position: relative;    
+  padding-left: 6px;   
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  box-shadow: 0 5px 8px #e5e5e5;
+  &:active {
+    background-color: #f5edff;
+    .step__icon {
+      color: $primary-color;
+    }
+  }  
+  &__number {
+    @include central;
+    width: 25px;
+    height: 25px;    
+    background-color: $primary-color;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 14px;
+    position: absolute;
+    left: -10px;
+    z-index: 1;
+  }
+  &__icon {
+    font-size: 16px;
+    color: #7e7e7e;
+    position: absolute;    
+    left: 35px;
+    &--size-1 {
+      font-size: 20px;
+    }
+    &--size-2 {
+      font-size: 18px;
+    }
+  }     
+}

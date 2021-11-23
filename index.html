@@ -22,7 +22,7 @@
     <main>
 
       <!-- Hero -->
-      <section>
+      <section class="hero">
 
         <!-- Search form -->
         <div>
@@ -40,38 +40,32 @@
         </div>
       
         <!-- Fonctionnement -->
-        <div>
+        <div class="fonctionnement">
 
-          <h2>Fonctionnement</h2>
+          <h2 class="fonctionnement__title">Fonctionnement</h2>
 
           <!-- Steps -->
-          <div class="">
+          <div class="fonctionnement__steps-list">
 
             <!-- Step 1 -->
-            <div class="">
-              <div>1</div>
-              <div>
-                <i class="fas fa-mobile-alt"></i>         
-                <h4>Choisissez un restaurant</h4>
-              </div>          
+            <div class="step">
+              <div class="step__number">1</div>
+              <i class="step__icon step__icon--size-1 fas fa-mobile-alt"></i>        
+              <h4>Choisissez un restaurant</h4>                        
             </div>
 
             <!-- Step 2 -->
-            <div class="">
-              <div>2</div>
-              <div>
-                <i class="fas fa-list-ul"></i>         
-                <h4>Composez votre menu</h4>
-              </div>          
+            <div class="step">
+              <div class="step__number">2</div>              
+              <i class="step__icon step__icon--size-2 fas fa-list-ul"></i>         
+              <h4>Composez votre menu</h4>                    
             </div>
 
             <!-- Step 3 -->
-            <div class="">
-              <div>3</div>
-              <div>
-                <i class="fas fa-store"></i>         
-                <h4>Dégustez au restaurant</h4>
-              </div>          
+            <div class="step">
+              <div class="step__number">3</div>
+              <i class="step__icon fas fa-store"></i>         
+              <h4>Dégustez au restaurant</h4>                        
             </div>
 
           </div>
@@ -81,61 +75,67 @@
       </section>
       
       <!-- Restaurants -->
-      <section>
+      <section class="restaurants">
 
-        <h2>Restaurants</h2>
+        <h2 class="restaurants__title">Restaurants</h2>
 
-        <div>
+        <div class="restaurants__list container">          
 
           <!-- La palette du goût -->
           <div class="card">
-            <div class="card__img">
-              <div class="card__img--new">Nouveau</div>
+            <div class="card__area">
+              <div class="card__area--new">Nouveau</div>
+              <img class="card__img" src="images/restaurants/la-palette-du-gout.jpg" alt="La palette du goût">
             </div>
-            <div>
-              <div>
+            <div class="card__caption">
+              <div class="card__description">
                 <h3>La palette du goût</h3>
                 <p>Ménilmontant</p>
               </div>
-              <div><i class="fas fa-heart"></i></div>
+              <div class="card__heart"><i class="far fa-heart"></i></div>
             </div>
           </div>
 
           <!-- La note enchantée -->
           <div class="card">
-            <div class="card__img">
-              <div class="card__img--new">Nouveau</div>
+            <div class="card__area">
+              <div class="card__area--new">Nouveau</div>
+              <img class="card__img card__img--positioning" src="images/restaurants/la-note-enchantee.jpg" alt="La note enchantée">
             </div>
-            <div>
-              <div>
+            <div class="card__caption">
+              <div class="card__description">
                 <h3>La note enchantée</h3>
                 <p>Charonne</p>
               </div>
-              <div><i class="fas fa-heart"></i></div>
+              <div class="card__heart"><i class="far fa-heart"></i></div>
             </div>
           </div>
 
           <!-- À la française -->
           <div class="card">
-            <div class="card__img"></div>
-            <div>
-              <div>
+            <div class="card__area">
+              <img class="card__img" src="images/restaurants/a-la-francaise.jpg" alt="À la française">
+            </div>
+            <div class="card__caption">
+              <div class="card__description">
                 <h3>À la française</h3>
                 <p>Cité Rouge</p>
               </div>
-              <div><i class="fas fa-heart"></i></div>
+              <div class="card__heart"><i class="far fa-heart"></i></div>
             </div>
           </div>
 
           <!-- Le délice des sens -->
           <div class="card">
-            <div class="card__img"></div>
-            <div>
-              <div>
+            <div class="card__area">
+              <img class="card__img" src="images/restaurants/le-delice-des-sens.jpg" alt="Le délice des sens">
+            </div>
+            <div class="card__caption">
+              <div class="card__description">
                 <h3>Le délice des sens</h3>
                 <p>Folie-Méricourt</p>
               </div>
-              <div><i class="fas fa-heart"></i></div>
+              <div class="card__heart"><i class="far fa-heart"></i></div>
             </div>
           </div>
 
@@ -146,11 +146,11 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-      <p>ohmyfood</p>
-      <ul>
-        <li><i class="fas fa-utensils"></i> <a href="#">Proposer un restaurant</a></li>
-        <li><i class="fas fa-hands-helping"></i> <a href="#">Devenir partenaire</a></li>
+    <footer class="footer container">
+      <h3 class="footer__title">ohmyfood</h3>
+      <ul class="footer__list">
+        <li><div class="footer__icon"><i class="fas fa-utensils"></i></div> <a href="#">Proposer un restaurant</a></li>
+        <li><div class="footer__icon"><i class="fas fa-hands-helping"></i></div> <a href="#">Devenir partenaire</a></li>
         <li><a href="#">Mentions légales</a></li>
         <li><a href="#">Contact</a></li>
       </ul>     

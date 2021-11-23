@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /*
@@ -53,11 +53,11 @@ h2 {
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 h4 {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 /*
@@ -74,6 +74,7 @@ h4 {
   background: #9356DC;
   background: linear-gradient(to top, #9356DC, #FF79DA);
   cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 .btn-default:hover {
   background: #9356DC;
@@ -90,7 +91,6 @@ header {
   align-items: center;
   width: 100%;
   height: 65px;
-  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 /*
@@ -109,6 +109,7 @@ header {
   align-items: center;
   width: 100%;
   height: 50px;
+  box-shadow: inset 0px 5px 5px -5px rgba(0, 0, 0, 0.25);
   border: none;
   margin: 0;
   padding: 0;
@@ -133,6 +134,179 @@ header {
   margin-top: -5px;
   margin-bottom: 30px;
   color: #353535;
+}
+
+/*
+  ========================================
+  Fonctionnement
+  ========================================
+*/
+.fonctionnement {
+  height: 400px;
+}
+.fonctionnement__title {
+  margin: 45px 0 0 20px;
+}
+.fonctionnement__steps-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 270px;
+  margin-top: 30px;
+}
+
+.step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 87%;
+  height: 75px;
+  position: relative;
+  padding-left: 6px;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  box-shadow: 0 5px 8px #e5e5e5;
+}
+.step:active {
+  background-color: #f5edff;
+}
+.step:active .step__icon {
+  color: #9356DC;
+}
+.step__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: #9356DC;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 14px;
+  position: absolute;
+  left: -10px;
+  z-index: 1;
+}
+.step__icon {
+  font-size: 16px;
+  color: #7e7e7e;
+  position: absolute;
+  left: 35px;
+}
+.step__icon--size-1 {
+  font-size: 20px;
+}
+.step__icon--size-2 {
+  font-size: 18px;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  height: 1230px;
+}
+.restaurants__title {
+  padding: 52px 0 0 20px;
+  margin: 0;
+}
+
+.card {
+  border-radius: 20px;
+  height: 250px;
+  margin: 20px 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.card__area {
+  position: relative;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  height: 175px;
+}
+.card__area--new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85px;
+  height: 30px;
+  color: #008766;
+  font-size: 14px;
+  font-weight: 500;
+  position: absolute;
+  right: 0;
+  background-color: #99E2D0;
+  margin: 15px;
+  border-radius: 3px;
+}
+.card__img {
+  width: 100%;
+  height: 175px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  object-fit: cover;
+  object-position: 0 bottom;
+}
+.card__img--positioning {
+  object-position: 0 -148px;
+}
+.card__caption {
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  height: 75px;
+  display: flex;
+  background-color: #fff;
+}
+.card__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 85%;
+  height: 75px;
+  padding-left: 10px;
+}
+.card__description h3, .card__description p {
+  margin: 0;
+  padding: 2px 0;
+}
+.card__heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  font-size: 24px;
+}
+
+/*
+  ========================================
+  Footer
+  ========================================
+*/
+.footer {
+  height: 200px;
+  background-color: #353535;
+  color: #fff;
+  padding-left: 25px;
+}
+.footer__title {
+  margin: 0;
+  padding-top: 20px;
+  font: 18px "Shrikhand", Arial, sans-serif;
+}
+.footer__list {
+  padding: 0;
+  list-style: none;
+  line-height: 26px;
+}
+.footer__list li {
+  display: flex;
+  width: 100%;
+}
+.footer__list a {
+  color: #fff;
+}
+.footer__icon {
+  width: 24px;
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */
