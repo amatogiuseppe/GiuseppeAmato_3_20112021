@@ -22,23 +22,26 @@
     <main>
 
       <!-- Hero -->
-      <section class="hero">
+      <section>
 
-        <!-- Search form -->
-        <div>
-          <form class="search-form" action="#" method="post">
-            <fieldset>
-              <label>
-                <i class="fas fa-map-marker-alt"></i>
-                <input type="search" name="search-form__bar" class="search-form__bar" placeholder="Paris, Belleville" title="Saisissez un emplacement">
-              </label>       
-            </fieldset>
-            <h2 class="search-form__title">Réservez le menu qui vous convient</h2>
-            <p class="search-form__description">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-            <button class="search-form__button btn-default" name="submit">Explorer nos restaurants</button>
-          </form>
-        </div>
+        <!-- Search form -->        
+        <form class="search-form" action="#" method="post">
+          <fieldset>
+            <label>
+              <i class="fas fa-map-marker-alt"></i>
+              <input type="search" name="search-form__bar" class="search-form__bar" placeholder="Paris, Belleville" title="Saisissez un emplacement">
+            </label>       
+          </fieldset>
+          <h2 class="search-form__title">Réservez le menu qui vous convient</h2>
+          <p class="search-form__description">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+          <button class="search-form__button btn-default" name="submit">Explorer nos restaurants</button>
+        </form>  
+
+      </section>
       
+      <!-- Main Content -->
+      <section class="main-content container--XL">
+
         <!-- Fonctionnement -->
         <div class="fonctionnement">
 
@@ -51,97 +54,109 @@
             <div class="step">
               <div class="step__number">1</div>
               <i class="step__icon step__icon--size-1 fas fa-mobile-alt"></i>        
-              <h4>Choisissez un restaurant</h4>                        
+              <h4 class="step__title">Choisissez un restaurant</h4>                        
             </div>
 
             <!-- Step 2 -->
             <div class="step">
               <div class="step__number">2</div>              
               <i class="step__icon step__icon--size-2 fas fa-list-ul"></i>         
-              <h4>Composez votre menu</h4>                    
+              <h4 class="step__title">Composez votre menu</h4>                    
             </div>
 
             <!-- Step 3 -->
             <div class="step">
               <div class="step__number">3</div>
               <i class="step__icon fas fa-store"></i>         
-              <h4>Dégustez au restaurant</h4>                        
+              <h4 class="step__title">Dégustez au restaurant</h4>                        
             </div>
 
-          </div>
-
-        </div>        
-        
-      </section>
-      
-      <!-- Restaurants -->
-      <section class="restaurants">
-
-        <h2 class="restaurants__title">Restaurants</h2>
-
-        <div class="restaurants__list container">          
-
-          <!-- La palette du goût -->
-          <div class="card">
-            <div class="card__area">
-              <div class="card__area--new">Nouveau</div>
-              <img class="card__img" src="images/restaurants/la-palette-du-gout.jpg" alt="La palette du goût">
-            </div>
-            <div class="card__caption">
-              <div class="card__description">
-                <h3>La palette du goût</h3>
-                <p>Ménilmontant</p>
-              </div>
-              <div class="card__heart"><i class="far fa-heart"></i></div>
-            </div>
-          </div>
-
-          <!-- La note enchantée -->
-          <div class="card">
-            <div class="card__area">
-              <div class="card__area--new">Nouveau</div>
-              <img class="card__img card__img--positioning" src="images/restaurants/la-note-enchantee.jpg" alt="La note enchantée">
-            </div>
-            <div class="card__caption">
-              <div class="card__description">
-                <h3>La note enchantée</h3>
-                <p>Charonne</p>
-              </div>
-              <div class="card__heart"><i class="far fa-heart"></i></div>
-            </div>
-          </div>
-
-          <!-- À la française -->
-          <div class="card">
-            <div class="card__area">
-              <img class="card__img" src="images/restaurants/a-la-francaise.jpg" alt="À la française">
-            </div>
-            <div class="card__caption">
-              <div class="card__description">
-                <h3>À la française</h3>
-                <p>Cité Rouge</p>
-              </div>
-              <div class="card__heart"><i class="far fa-heart"></i></div>
-            </div>
-          </div>
-
-          <!-- Le délice des sens -->
-          <div class="card">
-            <div class="card__area">
-              <img class="card__img" src="images/restaurants/le-delice-des-sens.jpg" alt="Le délice des sens">
-            </div>
-            <div class="card__caption">
-              <div class="card__description">
-                <h3>Le délice des sens</h3>
-                <p>Folie-Méricourt</p>
-              </div>
-              <div class="card__heart"><i class="far fa-heart"></i></div>
-            </div>
           </div>
 
         </div>
+        
+        <!-- Restaurants -->
+        <section class="restaurants">
+
+          <h2 class="restaurants__title">Restaurants</h2>
+
+          <div class="restaurants__row container">          
+
+            <!-- La palette du goût -->
+            <div class="card">
+              <a href="la-palette-du-gout.html">
+                <div class="card__area">
+                  <div class="card__area--new">Nouveau</div>
+                  <img class="card__img" src="images/restaurants/la-palette-du-gout.jpg" alt="La palette du goût">
+                </div>
+                <div class="card__caption">
+                  <div class="card__description">
+                    <h3>La palette du goût</h3>
+                    <p>Ménilmontant</p>
+                  </div>
+                  <div class="card__heart"><i class="far fa-heart"></i></div>
+                </div>
+              </a>
+            </div>
+
+            <!-- La note enchantée -->
+            <div class="card">
+              <a href="la-note-enchantee.html">
+                <div class="card__area">
+                  <div class="card__area--new">Nouveau</div>
+                  <img class="card__img card__img--positioning" src="images/restaurants/la-note-enchantee.jpg" alt="La note enchantée">
+                </div>
+                <div class="card__caption">
+                  <div class="card__description">
+                    <h3>La note enchantée</h3>
+                    <p>Charonne</p>
+                  </div>
+                  <div class="card__heart"><i class="far fa-heart"></i></div>
+                </div>
+              </a>
+            </div>
+          
+          </div>
+
+          <div class="restaurants__row restaurants__row--last container"> 
+
+            <!-- À la française -->
+            <div class="card">
+              <a href="a-la-francaise.html">
+                <div class="card__area">
+                  <img class="card__img" src="images/restaurants/a-la-francaise.jpg" alt="À la française">
+                </div>
+                <div class="card__caption">
+                  <div class="card__description">
+                    <h3>À la française</h3>
+                    <p>Cité Rouge</p>
+                  </div>
+                  <div class="card__heart"><i class="far fa-heart"></i></div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Le délice des sens -->
+            <div class="card">
+              <a href="la-delice-des-sens.html">
+                <div class="card__area">
+                  <img class="card__img" src="images/restaurants/le-delice-des-sens.jpg" alt="Le délice des sens">
+                </div>
+                <div class="card__caption">
+                  <div class="card__description">
+                    <h3>Le délice des sens</h3>
+                    <p>Folie-Méricourt</p>
+                  </div>
+                  <div class="card__heart"><i class="far fa-heart"></i></div>
+                </div>
+              </a>
+            </div>
+
+          </div>
      
-      </section>     
+        </section>
+
+      </section>           
 
     </main>
 

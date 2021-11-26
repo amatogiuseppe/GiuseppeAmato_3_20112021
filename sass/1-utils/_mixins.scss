@@ -1,5 +1,28 @@
+// Flexbox: mixin to centre elements
 @mixin central {
   display: flex;
   justify-content: center;
   align-items: center;    
+}
+
+// Breakpoints
+@mixin small { 
+  @media all and (min-width: $small) { 
+    @content;
+  } 
+}
+@mixin medium { 
+  @media all and (min-width: $medium) { 
+    @content;
+  } 
+}
+@mixin large { 
+  @media all and (min-width: $large) { 
+    @content;
+  } 
+}
+@mixin extra-large { 
+  @media all and (min-width: $extra-large) { 
+    @content;
+  } 
 }
