@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" href="css/normalize.css">    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Shrikhand">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/9adbfe9cdc.js" crossorigin="anonymous"></script>
+    <title>ohmyfood</title>  
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <header>
+      <div class="arrow-left"><a href="../index.html"><i class="fas fa-arrow-left"></i></a></div>   
+      <h1>ohmyfood</h1>
+    </header>
+
+    <!-- Main -->
+    <main>      
+      <section class="menu">
+
+        <!-- Logo -->
+        <div class="menu__logo">
+          <img class="menu__logo--img" src="../images/restaurants/la-palette-du-gout.jpg" alt="La palette du goût">
+        </div>
+
+        <!-- Title -->
+        <div class="menu__heading container">
+          <h2 class="menu__title">La palette du goût</h2>
+          <div class="menu__heart"><i class="far fa-heart"></i></div>
+        </div>
+
+        <!-- Command Form -->
+        <form class="command-form" action="#" method="post">
+
+          <fieldset class="command-fieldset">
+
+            <!-- Command Entrées -->
+            <label class="command-group">
+              <h3 class="command-group__title container">entrées</h3>
+
+                <!-- Fricassée d'escargot -->
+                <div class="command-button">
+                  <h4 class="command-button__title">Fricassée d'escargot</h4>
+                  <div class="command-button__description">
+                    <p>Au pimet d'espelette</p>
+                    <p><strong>25€</strong></p>
+                  </div>
+                </div>
+                <input type="checkbox" name="entree" value="fricassee-escargot" hidden>
+
+                <!-- Foie gras de canard mi-cuit -->
+                <div class="command-button">
+                  <h4 class="command-button__title">Foie gras de canard mi-cuit</h4>
+                  <div class="command-button__description">
+                    <p>Et ses copeaux de truffe noire</p>
+                    <p><strong>35€</strong></p>
+                  </div>
+                </div>
+                <input type="checkbox" name="entree" value="foie-gras" hidden>
+
+                <!-- Oeuf au plat -->
+                <div class="command-button">
+                  <h4 class="command-button__title">Oeuf au plat</h4>
+                  <div class="command-button__description">
+                    <p>Assaisonné à la truffe sur lit de caviar</p>
+                    <p><strong>20€</strong></p>
+                  </div>
+                </div>
+                <input type="checkbox" name="entree" value="oeuf-plat" hidden>
+
+            </label>
+
+            <!-- Command Plats -->
+            <label class="command-group">
+              <h3 class="command-group__title container">plats</h3>
+
+                <!-- Filet de boeuf aux herbes -->
+                <div class="command-button">
+                  <h4 class="command-button__title">Filet de boeuf aux herbes</h4>
+                  <div class="command-button__description">
+                    <p>Accompagné de sa ribambelle de légumes</p>
+                    <p><strong>40€</strong></p>
+                  </div>
+                </div>
+                <input type="checkbox" name="entree" value="filet-boeuf" hidden>
+
+                <!-- Parmentier de queue de boeuf -->
+                <div class="command-button">
+                  <h4 class="command-button__title">Parmentier de queue de boeuf</h4>
+                  <div class="command-button__description">
+                    <p>À la truffe noire sur sa purée de panais</p>
+                    <p><strong>35€</strong></p>
+                  </div>
+                </div>
+                <input type="checkbox" name="entree" value="parmentier-queue" hidden>
+
+                <!-- Filet de turbot -->
+                <div class="command-button">
+                  <h4 class="command-button__title">Filet de Turbot</h4>
+                  <div class="command-button__description">
+                    <p>Aux agrumes</p>
+                    <p><strong>44€</strong></p>
+                  </div>
+                </div>
+                <input type="checkbox" name="entree" value="filet-turbot" hidden>
+
+            </label>
+
+            <!-- Command Desserts -->
+            <label class="command-group">
+              <h3 class="command-group__title container">desserts</h3>
+
+                <!-- Paris-Brest -->
+                <div class="command-button">
+                  <h4 class="command-button__title">Paris-Brest</h4>
+                  <div class="command-button__description">
+                    <p>Revisité</p>
+                    <p><strong>18€</strong></p>
+                  </div>
+                </div>
+                <input type="checkbox" name="entree" value="paris-brest" hidden>
+
+                <!-- Macaron au chocolat d'exception -->
+                <div class="command-button">
+                  <h4 class="command-button__title">Macaron au chocolat d'exception</h4>
+                  <div class="command-button__description">
+                    <p>Et glace à la vanille de Madagascar</p>
+                    <p><strong>22€</strong></p>
+                  </div>
+                </div>
+                <input type="checkbox" name="entree" value="macaron-chocolat" hidden>
+
+                <!-- Mousse au chocolat -->
+                <div class="command-button">
+                  <h4 class="command-button__title">Mousse au chocolat</h4>
+                  <div class="command-button__description">
+                    <p>Au piment d'espelette et à la truffe noire</p>
+                    <p><strong>23€</strong></p>
+                  </div>
+                </div>
+                <input type="checkbox" name="entree" value="mousse-chocolat" hidden>
+
+            </label>
+
+          </fieldset>
+
+          <button class="command-form__button btn-default" name="submit">Commander</button>
+
+        </form>
+
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer container">
+        <h3 class="footer__title">ohmyfood</h3>
+        <ul class="footer__list">
+          <li><div class="footer__icon"><i class="fas fa-utensils"></i></div> <a href="#">Proposer un restaurant</a></li>
+          <li><div class="footer__icon"><i class="fas fa-hands-helping"></i></div> <a href="#">Devenir partenaire</a></li>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>     
+    </footer>
+  
+  </body>
+  
+</html>

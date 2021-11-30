@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
   ========================================
   Custom styles
@@ -7,6 +8,7 @@ body {
   background: #fff;
   color: #000;
   font: 400 16px "Roboto", Arial, sans-serif;
+  margin: 0;
 }
 
 /*
@@ -73,6 +75,7 @@ h4 {
 .btn-default {
   width: 220px;
   height: 50px;
+  font: 400 16px "Roboto", Arial, sans-serif;
   border: none;
   border-radius: 35px;
   color: #fff;
@@ -96,6 +99,15 @@ header {
   align-items: center;
   width: 100%;
   height: 65px;
+  position: relative;
+}
+header .arrow-left {
+  position: absolute;
+  left: 20px;
+  font-size: 20px;
+}
+header .fas {
+  color: #353535;
 }
 
 /*
@@ -398,6 +410,109 @@ header {
 .footer__icon {
   width: 24px;
   font-size: 12px;
+}
+
+/*
+  ========================================
+  La palette du goût
+  ========================================
+*/
+/* ---------- Logo + Title ------------ */
+.menu__logo {
+  height: 270px;
+  width: 100%;
+  margin-bottom: -50px;
+  position: relative;
+  z-index: -1;
+}
+.menu__logo--img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.menu__heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f6f6f6;
+  border-top-right-radius: 35px;
+  border-top-left-radius: 35px;
+  padding-top: 7px;
+  margin-bottom: -25px;
+}
+.menu__title {
+  font: 400 28px "Shrikhand", Arial, sans-serif;
+}
+.menu__heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  padding-right: 15px;
+}
+
+/* ---------- Command Form ------------ */
+.command-form {
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.command-form__button {
+  margin: 30px 0 58px 0;
+  width: 185px;
+}
+
+.command-group__title {
+  margin: 0;
+  margin-top: 35px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+}
+.command-group__title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  background-color: #99E2D0;
+  height: 3px;
+  margin: 5px 0 15px 0;
+}
+
+.command-fieldset {
+  padding: 0;
+  border: none;
+}
+
+/* --------- Command Button ----------- */
+.command-button {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 9px;
+  margin: 0 15px 15px 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.command-button__title {
+  margin: 2px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.command-button__description {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-right: 12px;
+}
+.command-button__description p {
+  margin: 2px;
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.command-button__description p:first-child {
+  width: 83.7%;
 }
 
 /*# sourceMappingURL=style.css.map */
