@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
   ========================================
   Custom styles
@@ -414,7 +413,7 @@ header .fas {
 
 /*
   ========================================
-  La palette du goût
+  Menu
   ========================================
 */
 /* ---------- Logo + Title ------------ */
@@ -464,6 +463,23 @@ header .fas {
   width: 185px;
 }
 
+.command-fieldset {
+  width: 100%;
+  padding: 0;
+  border: none;
+  min-inline-size: auto;
+}
+@media all and (min-width: 992px) {
+  .command-fieldset {
+    display: flex;
+    padding: 0 20px;
+  }
+}
+
+.command-group {
+  width: 100%;
+  min-width: 20%;
+}
 .command-group__title {
   margin: 0;
   margin-top: 35px;
@@ -478,11 +494,6 @@ header .fas {
   background-color: #99E2D0;
   height: 3px;
   margin: 5px 0 15px 0;
-}
-
-.command-fieldset {
-  padding: 0;
-  border: none;
 }
 
 /* --------- Command Button ----------- */

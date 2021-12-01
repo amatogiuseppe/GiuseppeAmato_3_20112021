@@ -1,6 +1,6 @@
 /*
   ========================================
-  La palette du goût
+  Menu
   ========================================
 */
 
@@ -48,8 +48,22 @@
     width: 185px;    
   }
 }
+
+.command-fieldset {
+  width: 100%;
+  padding: 0;
+  border: none;
+  min-inline-size: auto;
+  @include large { 
+    display: flex;
+    padding: 0 20px;
+  } 
+}
+
 .command-group {
-  &__title {
+  width: 100%;
+  min-width: 20%;
+  &__title {    
     margin: 0;
     margin-top: 35px;
     text-transform: uppercase;
@@ -64,10 +78,6 @@
       margin: 5px 0 15px 0;
     }
   }
-}
-.command-fieldset {
-  padding: 0;
-  border: none;
 }
 
 /* --------- Command Button ----------- */
