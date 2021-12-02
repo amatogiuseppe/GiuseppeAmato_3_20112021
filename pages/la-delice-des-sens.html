@@ -8,18 +8,152 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Shrikhand">
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://kit.fontawesome.com/9adbfe9cdc.js" crossorigin="anonymous"></script>
-    <title>ohmyfood</title>  
+    <title>ohmyfood - Le délice des sens</title>  
   </head>
 
   <body>
 
     <!-- Header -->
     <header>
-      <h1>ohmyfood</h1>
+      <div class="arrow-left"><a href="../index.html"><i class="fas fa-arrow-left"></i></a></div>   
+      <h1><a href="../index.html">ohmyfood</a></h1>
     </header>
 
     <!-- Main -->
-    <main>
+    <main>      
+      <section class="menu">
+
+        <!-- Logo -->
+        <div class="menu__logo">
+          <img class="menu__logo--img" src="../images/restaurants/le-delice-des-sens.jpg" alt="Le délice des sens">
+        </div>
+
+        <!-- Title -->
+        <div class="menu__heading container">
+          <h2 class="menu__title">Le délice des sens</h2>
+          <div class="menu__heart"><i class="far fa-heart"></i></div>
+        </div>
+
+        <!-- Command Form -->
+        <form class="command-form" action="#" method="post">
+
+          <fieldset class="command-fieldset">
+
+            <!-- Entrées -->
+            <label class="command-group">
+              <h3 class="command-group__title container">entrées</h3>
+
+              <!-- Tartare de thon -->
+              <div class="command-button">
+                <h4 class="command-button__title">Tartare de thon</h4>
+                <div class="command-button__description">
+                  <p>Assaisonné au yuzu</p>
+                  <p><strong>25€</strong></p>
+                </div>
+              </div>
+              <input type="checkbox" name="entree" value="tartare-thon" hidden>
+
+              <!-- Bouchée de homard croustillant -->
+              <div class="command-button">
+                <h4 class="command-button__title">Bouchée de homard croustillant</h4>
+                <div class="command-button__description">
+                  <p>Et sa farandole de petits légumes</p>
+                  <p><strong>35€</strong></p>
+                </div>
+              </div>
+              <input type="checkbox" name="entree" value="bouchee-homard" hidden>
+
+              <!-- Velouté de cèpes -->
+              <div class="command-button">
+                <h4 class="command-button__title">Velouté de cèpes</h4>
+                <div class="command-button__description">
+                  <p>Aux truffes</p>
+                  <p><strong>20€</strong></p>
+                </div>
+              </div>
+              <input type="checkbox" name="entree" value="veloute-cepes" hidden>
+
+            </label>
+
+            <!-- Plats -->
+            <label class="command-group">
+              <h3 class="command-group__title container">plats</h3>
+
+              <!-- Poulet rôti aux herbes de Provence -->
+              <div class="command-button">
+                <h4 class="command-button__title">Poulet rôti aux herbes de Provence</h4>
+                <div class="command-button__description">
+                  <p>Et sa crème de truffe</p>
+                  <p><strong>40€</strong></p>
+                </div>
+              </div>
+              <input type="checkbox" name="entree" value="poulet-roti" hidden>
+
+              <!-- Langouste rôtie -->
+              <div class="command-button">
+                <h4 class="command-button__title">Langouste rôtie</h4>
+                <div class="command-button__description">
+                  <p>Et ses légumes de saison</p>
+                  <p><strong>35€</strong></p>
+                </div>
+              </div>
+              <input type="checkbox" name="entree" value="langouste-rotie" hidden>
+
+              <!-- Côte de boeuf Angus -->
+              <div class="command-button">
+                <h4 class="command-button__title">Côte de boeuf Angus</h4>
+                <div class="command-button__description">
+                  <p>Et sa purée de panais</p>
+                  <p><strong>44€</strong></p>
+                </div>
+              </div>
+              <input type="checkbox" name="entree" value="cote-boeuf" hidden>
+
+            </label>
+
+            <!-- Desserts -->
+            <label class="command-group">
+              <h3 class="command-group__title container">desserts</h3>
+
+              <!-- Farandole de desserts -->
+              <div class="command-button">
+                <h4 class="command-button__title">Farandole de desserts</h4>
+                <div class="command-button__description">
+                  <p>Du chef</p>
+                  <p><strong>18€</strong></p>
+                </div>
+              </div>
+              <input type="checkbox" name="entree" value="farandole-desserts" hidden>
+
+              <!-- Crème brulée -->
+              <div class="command-button">
+                <h4 class="command-button__title">Crème brulée</h4>
+                <div class="command-button__description">
+                  <p>Revisitée</p>
+                  <p><strong>22€</strong></p>
+                </div>
+              </div>
+              <input type="checkbox" name="entree" value="creme-brulee" hidden>
+
+              <!-- Tiramisu -->
+              <div class="command-button">
+                <h4 class="command-button__title">Tiramisu</h4>
+                <div class="command-button__description">
+                  <p>À la noisette</p>
+                  <p><strong>23€</strong></p>
+                </div>
+              </div>
+              <input type="checkbox" name="entree" value="tiramisu" hidden>
+
+            </label>
+
+          </fieldset>
+
+          <button class="command-form__button btn-default" name="submit">Commander</button>
+
+        </form>
+
+      </section>
     </main>
 
     <!-- Footer -->

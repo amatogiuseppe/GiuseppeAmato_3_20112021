@@ -8,18 +8,162 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Shrikhand">
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://kit.fontawesome.com/9adbfe9cdc.js" crossorigin="anonymous"></script>
-    <title>ohmyfood</title>  
+    <title>ohmyfood - La note enchantée</title>  
   </head>
 
   <body>
 
     <!-- Header -->
     <header>
-      <h1>ohmyfood</h1>
+      <div class="arrow-left"><a href="../index.html"><i class="fas fa-arrow-left"></i></a></div>   
+      <h1><a href="../index.html">ohmyfood</a></h1>
     </header>
 
     <!-- Main -->
-    <main>
+    <main>      
+      <section class="menu">
+
+        <!-- Logo -->
+        <div class="menu__logo">
+          <img class="menu__logo--img" src="../images/restaurants/la-note-enchantee.jpg" alt="La note enchantée">
+        </div>
+
+        <!-- Title -->
+        <div class="menu__heading container">
+          <h2 class="menu__title">La note enchantée</h2>
+          <div class="menu__heart"><i class="far fa-heart"></i></div>
+        </div>
+
+        <!-- Command Form -->
+        <form class="command-form" action="#" method="post">
+
+          <fieldset class="command-fieldset">
+
+            <!-- Entrées -->
+            <label class="command-group">
+              <h3 class="command-group__title container">entrées</h3>
+
+              <!-- Ravioles de foie gras -->
+              <div class="command-button">
+                <h4 class="command-button__title">Ravioles de foie gras</h4>
+                <div class="command-button__description">
+                  <p>Accompagnés de leur crème à la truffe</p>
+                  <p><strong>25€</strong></p>
+                </div>
+              </div>
+              <input type="checkbox" name="entree" value="ravioles-foie-gras" hidden>
+
+              <!-- Caviar osciètre -->
+              <div class="command-button">
+                <h4 class="command-button__title">Caviar osciètre</h4>
+                <div class="command-button__description">
+                  <p>Sur blini à la farine de blé noir</p>
+                  <p><strong>35€</strong></p>
+                </div>
+              </div>
+              <input type="checkbox" name="entree" value="caviar-oscietre" hidden>
+
+              <!-- Homard et espuma de potiron -->
+              <div class="command-button">
+                <h4 class="command-button__title">Homard et espuma de potiron</h4>
+                <div class="command-button__description">
+                  <p>Mariné aux zestes d'orange</p>
+                  <p><strong>20€</strong></p>
+                </div>
+              </div>
+              <input type="checkbox" name="entree" value="homard-espuma-potiron" hidden>
+
+              <!-- Foie gras de canard cuit entier -->
+              <div class="command-button">
+                <h4 class="command-button__title">Foie gras de canard cuit entier</h4>
+                <div class="command-button__description">
+                  <p>Confiture de figue et pain toasté</p>
+                  <p><strong>35€</strong></p>
+                </div>
+              </div>
+              <input type="checkbox" name="entree" value="foie-gras-canard" hidden>
+
+            </label>
+
+            <!-- Plats -->
+            <label class="command-group">
+              <h3 class="command-group__title container">plats</h3>
+
+              <!-- Noix de coquilles Saint-Jacques -->
+              <div class="command-button">
+                <h4 class="command-button__title">Noix de coquilles Saint-Jacques</h4>
+                <div class="command-button__description">
+                  <p>Sur lit de purée de céleri-rave</p>
+                  <p><strong>40€</strong></p>
+                </div>
+              </div>
+              <input type="checkbox" name="entree" value="noix-coquilles" hidden>
+
+              <!-- Langoustine poêlée -->
+              <div class="command-button">
+                <h4 class="command-button__title">Langoustine poêlée</h4>
+                <div class="command-button__description">
+                  <p>Purée de patate douce</p>
+                  <p><strong>35€</strong></p>
+                </div>
+              </div>
+              <input type="checkbox" name="entree" value="langoustine-poelee" hidden>
+
+              <!-- Mijoté de queue de boeuf -->
+              <div class="command-button">
+                <h4 class="command-button__title">Mijoté de queue de boeuf</h4>
+                <div class="command-button__description">
+                  <p>Et riz sauvage aux zestes de citron</p>
+                  <p><strong>44€</strong></p>
+                </div>
+              </div>
+              <input type="checkbox" name="entree" value="mijote-queue-boeuf" hidden>
+
+            </label>
+
+            <!-- Desserts -->
+            <label class="command-group">
+              <h3 class="command-group__title container">desserts</h3>
+
+              <!-- Macaron noisette et chocolat -->
+              <div class="command-button">
+                <h4 class="command-button__title">Macaron noisette et chocolat</h4>
+                <div class="command-button__description">
+                  <p>Glace au caramel brun et sel de Guérande</p>
+                  <p><strong>18€</strong></p>
+                </div>
+              </div>
+              <input type="checkbox" name="entree" value="macaron-noisette-chocolat" hidden>
+
+              <!-- Baba au rhum revisité -->
+              <div class="command-button">
+                <h4 class="command-button__title">Baba au rhum revisité</h4>
+                <div class="command-button__description">
+                  <p>Avec son coulis de citron</p>
+                  <p><strong>22€</strong></p>
+                </div>
+              </div>
+              <input type="checkbox" name="entree" value="baba-rhum" hidden>
+
+              <!-- Tarte au citron meringuée -->
+              <div class="command-button">
+                <h4 class="command-button__title">Tarte au citron meringuée</h4>
+                <div class="command-button__description">
+                  <p>Déstructurée</p>
+                  <p><strong>23€</strong></p>
+                </div>
+              </div>
+              <input type="checkbox" name="entree" value="tarte-citron" hidden>
+
+            </label>
+
+          </fieldset>
+
+          <button class="command-form__button btn-default" name="submit">Commander</button>
+
+        </form>
+
+      </section>
     </main>
 
     <!-- Footer -->
