@@ -37,11 +37,11 @@
         <!-- Command Form -->
         <form class="command-form" action="#" method="post">
 
-          <fieldset class="command-fieldset">
+          <div class="command-fullset">
 
             <!-- Entrées -->
-            <label class="command-group">
-              <h3 class="command-group__title container">entrées</h3>
+            <fieldset class="command-fieldset">
+              <legend class="command-fieldset__title container">entrées</legend>
 
               <!-- Ravioles de foie gras -->
               <div class="command-button">
@@ -83,11 +83,11 @@
               </div>
               <input type="checkbox" name="entree" value="foie-gras-canard" hidden>
 
-            </label>
+            </fieldset>
 
             <!-- Plats -->
-            <label class="command-group">
-              <h3 class="command-group__title container">plats</h3>
+            <fieldset class="command-fieldset">
+              <legend class="command-fieldset__title container">plats</legend>
 
               <!-- Noix de coquilles Saint-Jacques -->
               <div class="command-button">
@@ -119,11 +119,11 @@
               </div>
               <input type="checkbox" name="entree" value="mijote-queue-boeuf" hidden>
 
-            </label>
+            </fieldset>
 
             <!-- Desserts -->
-            <label class="command-group">
-              <h3 class="command-group__title container">desserts</h3>
+            <fieldset class="command-fieldset">
+              <legend class="command-fieldset__title container">desserts</legend>
 
               <!-- Macaron noisette et chocolat -->
               <div class="command-button">
@@ -155,9 +155,9 @@
               </div>
               <input type="checkbox" name="entree" value="tarte-citron" hidden>
 
-            </label>
+            </fieldset>
 
-          </fieldset>
+          </div>
 
           <button class="command-form__button btn-default" name="submit">Commander</button>
 
@@ -173,7 +173,7 @@
           <li><div class="footer__icon"><i class="fas fa-utensils"></i></div> <a href="#">Proposer un restaurant</a></li>
           <li><div class="footer__icon"><i class="fas fa-hands-helping"></i></div> <a href="#">Devenir partenaire</a></li>
           <li><a href="#">Mentions légales</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
         </ul>     
     </footer>
   
