@@ -1,0 +1,78 @@
+/*
+  ========================================
+  Cards
+  ========================================
+*/
+
+.card {
+    border-radius: 20px;
+    width: 100%;  
+    height: 250px;
+    margin: 20px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);  
+    @include small { 
+      width: 48.5%;
+      margin-bottom: 0;
+    } 
+    &:hover {
+      cursor: pointer;
+    } 
+    &__area {    
+      position: relative;
+      @include rounded-top;
+      height: 70%;   
+      &--new {
+        @include flexbox;
+        width: 85px;
+        height: 30px;
+        color: #008766;
+        font-size: 14px;
+        font-weight: 500;
+        position: absolute;
+        right: 0;
+        background-color: $tertiary-color;
+        margin: 15px;
+        border-radius: 3px;      
+      }
+    }
+    &__img {      
+      width: 100%;
+      height: 100%;   
+      @include rounded-top;
+      object-fit: cover;
+      object-position: 0 bottom;    
+      &--positioning {
+        object-position: 0 -39.47vw;
+        @include small { 
+          object-position: 0 center;
+        } 
+      }      
+    }  
+    &__caption {    
+      @include rounded-top;
+      height: 30%;
+      display: flex;
+      background-color: #fff;    
+    }
+    &__description {      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 85%;
+      height: 100%;
+      padding-left: 10px;
+      h3, p {
+        margin: 0;
+        padding: 2px 0;
+      }    
+    }
+    &__heart {
+      @include flexbox;
+      width: 15%;
+      font-size: 24px;
+      &:hover {
+        color: $primary-color;
+        cursor: pointer;
+      }    
+    }  
+  }

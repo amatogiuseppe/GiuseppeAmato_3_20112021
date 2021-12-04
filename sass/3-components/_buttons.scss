@@ -4,7 +4,8 @@
   ========================================
 */
 
-.btn-default {
+/* --------- Default Buttons ---------- */
+.default-btn {
   width: 220px;
   height: 50px;
   font: 400 16px "Roboto", Arial, sans-serif;
@@ -13,9 +14,90 @@
   color: #fff;
   background: $primary-color;
   background: linear-gradient(to top, $primary-color, $secondary-color);
-  cursor: pointer;
   box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
   &:hover {
     background: $primary-color;
+    cursor: pointer;
+  }
+}
+
+/* ----- Fonctionnement Buttons ------- */
+.step-btn {
+  @include flexbox ($justify: flex-start);
+  width: 87%;
+  height: 75px;
+  position: relative;    
+  padding-left: 6px;   
+  background-color: $back-color;
+  border-radius: 25px;
+  box-shadow: 0 5px 8px lighten($base-color, 89.7%);  
+  &__title {
+    text-align: center;
+    width: 60%;  
+  }  
+  &__number {
+    @include flexbox;
+    width: 25px;
+    height: 25px;    
+    background-color: $primary-color;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 14px;
+    position: absolute;
+    left: -10px;
+    z-index: 1;
+  }
+  &__icon {
+    font-size: 16px;
+    color: lighten($base-color, 49.3%);
+    text-align: center;
+    width: 20%;
+    padding-left: 15px; 
+    &--size-1 {
+      font-size: 20px;
+    }
+    &--size-2 {
+      font-size: 18px;
+    }
+  }     
+  &:hover {
+    background-color: #f5edff;
+    cursor: pointer;
+    .step-btn__icon {
+      color: $primary-color;
+    }
+  }  
+}
+
+/* --------- Command Buttons ---------- */
+.command-btn {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 9px;
+  margin: 0 15px 15px 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+  &:hover {
+    cursor: pointer;
+  } 
+  &__title {
+    margin: 2px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  &__description {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-right: 12px;
+    p {
+      margin: 2px;
+      font-size: 15px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    p:first-child {
+      width: 83.7%;
+    }
   }
 }

@@ -1,0 +1,72 @@
+/*
+  ========================================
+  MAIN CONTENT
+  ========================================
+*/
+
+.main-content {
+  @include large {
+    display: flex;
+    flex-direction: row;
+    background-color: $back-color;   
+  }
+}
+
+/* ---------- Fonctionnement ---------- */
+.fonctionnement {
+  height: 400px;
+  @include large {
+    background-color: #fff;
+    height: 666px;
+  }      
+  &__title {
+    margin: 45px 0 0 20px;       
+  }
+  &__steps-list {     
+    @include flexbox ($justify: space-between, $direction: column);
+    height: 270px;
+    margin-top: 30px;
+  }
+  @include large {
+    width: 33.33%;    
+    margin-left: 20px;
+    margin-right: 10px;
+    @include rounded-top ($curving-value: 35px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, .1);    
+  } 
+}
+
+/* ----------- Restaurants ------------ */
+.restaurants {
+  background-color: $back-color;
+  height: 1230px;    
+  &__title {
+    padding: 52px 0 0 20px;
+    margin: 0;
+    @include large {
+      padding-top: 45px;
+    }    
+  }
+  &__row {
+    @include small { 
+      display: flex;
+      justify-content: space-between;            
+    }
+    &--last {
+      @include small { 
+        padding-bottom: 52px;            
+      }
+    }
+  }
+  @include small { 
+    height: auto;    
+  }
+  @include large {
+    width: 66.66%;
+    background-color: #fff;
+    margin-left: 10px;
+    margin-right: 20px;
+    @include rounded-top ($curving-value: 35px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, .1);
+  }  
+}

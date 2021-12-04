@@ -1,7 +1,29 @@
+// Palette
+$base-color: black;
+$palette: (
+  main-colors: (
+    primaire: #9356DC,
+    secondaire: #FF79DA,
+    tertiaire: #99E2D0,
+  ),     
+  derived-colors : (     
+    bg: lighten($base-color, 96.3%),
+    hard-accent: lighten($base-color, 20.6%), 
+    soft-accent: lighten($base-color, 91.6%),
+  ) 
+);
+$main-palette: map-get($palette, main-colors);
+$derived-palette: map-get($palette, derived-colors);
+
 // Colors
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
+$primary-color: map-get($main-palette, primaire); //--> #9356DC
+$secondary-color: map-get($main-palette, secondaire); //--> #FF79DA
+$tertiary-color: map-get($main-palette, tertiaire); //--> #99E2D0
+
+$back-color: map-get($derived-palette, bg); //--> #f6f6f6
+$hard-accent-color: map-get($derived-palette, hard-accent); //--> #353535 
+$soft-accent-color: map-get($derived-palette, soft-accent); //--> #eaeaea
+
 
 // Breakpoints
 $breakpoints: ( 

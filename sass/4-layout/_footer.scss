@@ -6,7 +6,7 @@
 
 .footer {
   height: 200px;
-  background-color: #353535;
+  background-color: $hard-accent-color;
   color: #fff;
   padding-left: 25px;
   &__title {
@@ -23,8 +23,7 @@
       width: 100%;
     }
     a {
-      color: #fff;
-      
+      color: #fff;      
     }
   }
   &__icon {    

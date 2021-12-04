@@ -1,8 +1,9 @@
-// Flexbox: mixin to centre elements
-@mixin central {
-  display: flex;
-  justify-content: center;
-  align-items: center;    
+// Flexbox
+@mixin flexbox ($justify: center, $align: center, $direction: row) {
+  display: flex;  
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
 }
 
 // Breakpoints
@@ -26,3 +27,10 @@
     @content;
   } 
 }
+
+// Border-top-radius
+@mixin rounded-top ($curving-value: 20px) {
+  border-top-left-radius: $curving-value;
+  border-top-right-radius: $curving-value;
+}
+
