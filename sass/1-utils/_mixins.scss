@@ -28,9 +28,65 @@
   } 
 }
 
-// Border-top-radius
+// Border-radius
 @mixin rounded-top ($curving-value: 20px) {
   border-top-left-radius: $curving-value;
   border-top-right-radius: $curving-value;
+}
+@mixin rounded-bottom ($curving-value: 20px) {
+  border-bottom-left-radius: $curving-value;
+  border-bottom-right-radius: $curving-value;
+}
+@mixin rounded-right ($curving-value: 15px) {
+  border-top-right-radius: $curving-value;
+  border-bottom-right-radius: $curving-value;
+}
+
+// Ellipses in text
+@mixin ellipses-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// Animation: Progress Heart
+@mixin progress-heart {
+  @include flexbox;
+  font-size: 24px;
+  position: relative;
+  .fas {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    background: $primary-color;            
+    background: linear-gradient($primary-color, $secondary-color);
+    -webkit-background-clip: text;
+       -moz-background-clip: text;
+            background-clip: text;
+    color: transparent;
+    transform-origin: bottom;
+  } 
+  .far {
+    position: absolute;
+    z-index: 2;
+    opacity: 1;      
+    transition: opacity 300ms ease-in;
+    &:hover {        
+      opacity: 0;
+      cursor: pointer;        
+      + .fas {
+        opacity: 1;          
+        animation: progress-heart 300ms ease-in;          
+      }
+    }
+    &:active {        
+      opacity: 0;
+      cursor: pointer;        
+      + .fas {
+        opacity: 1;          
+        animation: progress-heart 300ms ease-in;          
+      }
+    }           
+  }
 }
 

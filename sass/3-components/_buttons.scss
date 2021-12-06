@@ -16,8 +16,13 @@
   background: linear-gradient(to top, $primary-color, $secondary-color);
   box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
   &:hover {
-    background: $primary-color;
+    background: linear-gradient(to top, lighten($primary-color, 1.5%), lighten($secondary-color, 1.5%));
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .28);
     cursor: pointer;
+  }
+  &:active {
+    background: linear-gradient(to top, lighten($primary-color, 1.5%), lighten($secondary-color, 1.5%));
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .28);
   }
 }
 
@@ -66,6 +71,12 @@
     .step-btn__icon {
       color: $primary-color;
     }
+  }
+  &:active {
+    background-color: #f5edff;
+    .step-btn__icon {
+      color: $primary-color;
+    }
   }  
 }
 
@@ -76,13 +87,23 @@
   padding: 9px;
   margin: 0 15px 15px 15px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
-  &:hover {
-    cursor: pointer;
-  } 
+  position: relative;
+  transition-duration: 500ms;
+  animation: progress-fieldset 1000ms both;  
+  &:nth-of-type(2) {
+    animation-delay: 200ms;
+  }
+  &:nth-of-type(3) {
+    animation-delay: 300ms;
+  }
+  &:nth-of-type(4) {
+    animation-delay: 400ms;
+  }
   &__title {
     margin: 2px;
     font-size: 18px;
     font-weight: 500;
+    @include ellipses-text;
   }
   &__description {
     display: flex;
@@ -92,12 +113,47 @@
     p {
       margin: 2px;
       font-size: 15px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      @include ellipses-text;
     }
     p:first-child {
       width: 83.7%;
+    }
+  }
+  &__check {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include flexbox;
+    @include rounded-right;
+    height: 100%;
+    width: 60px;
+    background-color: $tertiary-color;
+    color: #fff;
+    font-size: 20px;
+    opacity: 0;
+    transform-origin: right;    
+  }
+  &:hover {
+    cursor: pointer;
+    padding-right: 69px;    
+    .command-btn__check {
+      opacity: 1;
+      animation: progress-command-check 500ms;      
+    }
+    .fa-check-circle {      
+      transform: rotate(360deg);
+      transition-duration: 500ms;
+    }
+  }
+  &:active {    
+    padding-right: 69px;    
+    .command-btn__check {
+      opacity: 1;
+      animation: progress-command-check 500ms;      
+    }
+    .fa-check-circle {      
+      transform: rotate(360deg);
+      transition-duration: 500ms;
     }
   }
 }
