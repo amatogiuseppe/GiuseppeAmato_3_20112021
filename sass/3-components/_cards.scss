@@ -9,22 +9,12 @@
   width: 100%;  
   height: 250px;
   margin: 20px 0;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
-  transform: scale(1);
-  transition: transform 400ms;  
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .1);     
   @include small { 
     width: 48.5%;
     margin-bottom: 0;
-  } 
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.02);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
   }
-  &:active {
-    transform: scale(1.02);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
-  } 
+  @include card-animation;
   &__area {    
     position: relative;
     @include rounded-top;
@@ -33,7 +23,7 @@
       @include flexbox;
       width: 85px;
       height: 30px;
-      color: #008766;
+      color: darken(saturate($tertiary-color, 44.27), 47.84);
       font-size: 14px;
       font-weight: 500;
       position: absolute;
@@ -75,7 +65,7 @@
     }    
   }
   &__heart {    
-    @include progress-heart;
+    @include heart-animation;
     width: 15%;               
   }  
 }

@@ -1,12 +1,7 @@
-// Flexbox
-@mixin flexbox ($justify: center, $align: center, $direction: row) {
-  display: flex;  
-  justify-content: $justify;
-  align-items: $align;
-  flex-direction: $direction;
-}
+//  ========================================
+//  Breakpoints Mixins
+//  ========================================
 
-// Breakpoints
 @mixin small { 
   @media all and (min-width: $small) { 
     @content;
@@ -26,6 +21,18 @@
   @media all and (min-width: $extra-large) { 
     @content;
   } 
+}
+
+//  ========================================
+//  Mixins for repeating styles
+//  ========================================
+
+// Flexbox
+@mixin flexbox ($justify: center, $align: center, $direction: row) {
+  display: flex;  
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
 }
 
 // Border-radius
@@ -49,8 +56,58 @@
   text-overflow: ellipsis;
 }
 
-// Animation: Progress Heart
-@mixin progress-heart {
+// Default Buttons
+@mixin default-btn-style {
+  height: 50px;
+  font: 400 16px "Roboto", Arial, sans-serif;
+  border: none;
+  border-radius: 35px;
+  color: #fff;
+  background: $primary-color;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+}
+
+// Fonctionnement Buttons
+@mixin step-btn-style {
+  @include flexbox ($justify: flex-start); 
+  height: 75px;
+  padding-left: 6px;
+  border-radius: 25px;  
+}
+
+//  ========================================
+//  Animation Mixins
+//  ========================================
+
+// Loading Spinner Animation
+@mixin loading-spinner-animation {
+  animation: loading-spinner 2500ms 300ms both;
+  &__icon {  
+    position: fixed;
+    left: 50%;
+    top: 42%;
+    margin-top: -25px;
+    margin-left: -25px;
+    z-index: 998;
+    font-size: 50px;
+    color: #fff;
+    animation: rotation-spinner 1500ms linear infinite;     
+  }
+  &__logo {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-top: -22px;
+    margin-left: -80.8125px;
+    z-index: 999;
+    font: 400 30px "Shrikhand", Arial, sans-serif;
+    color: #fff;
+    animation: progress-rise-up 1000ms both;
+  }
+}
+
+// Heart Animation
+@mixin heart-animation {
   @include flexbox;
   font-size: 24px;
   position: relative;
@@ -90,3 +147,134 @@
   }
 }
 
+// Default Button Animation
+@mixin default-btn-animation {
+  position: relative; 
+  z-index: 1;
+  &::after {
+    content: "";
+    @include default-btn-style;
+    background: linear-gradient(to top, lighten($primary-color,4), lighten($secondary-color,4));
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 300ms ease-out 20ms;
+  }
+  &:hover {    
+    cursor: pointer;
+    &::after {
+      opacity: 1;
+    }
+  }
+  &:active {
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+// Fonctionnement Button Animation
+@mixin step-btn-animation {
+  position: relative;
+  z-index: 1;  
+  &::after {
+    content: "";
+    @include step-btn-style;
+    width: 100%;
+    background-color: lighten(adjust-hue($secondary-color, -50), 22.75);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 400ms ease-out;
+  }
+  &:hover {
+    cursor: pointer;
+    &::after {      
+      opacity: 1;
+    }
+    .step-btn__icon {
+      color: $primary-color;
+    }
+  }
+  &:active {
+    &::after {      
+      opacity: 1;
+    }
+    .step-btn__icon {
+      color: $primary-color;
+    }
+  }
+}
+
+// Command Button Rise-up Animation
+@mixin command-btn-rise-up-animation {
+  animation: progress-rise-up 1000ms both; 
+  @for $i from 2 through 4 {
+    &:nth-of-type(#{$i}) {
+      animation-delay: $i*100ms;
+    }
+  } 
+}
+
+// Command Button Check Animation
+@mixin command-btn-check-animation {
+  position: relative; 
+  transition-duration: 500ms;
+  &:hover {
+    cursor: pointer;
+    padding-right: 69px;    
+    .command-btn__check {
+      opacity: 1;
+      animation: progress-command-check 500ms;      
+    }
+    .fa-check-circle {      
+      transform: rotate(360deg);
+      transition-duration: 500ms;
+    }
+  }
+  &:active {    
+    padding-right: 69px;    
+    .command-btn__check {
+      opacity: 1;
+      animation: progress-command-check 500ms;      
+    }
+    .fa-check-circle {      
+      transform: rotate(360deg);
+      transition-duration: 500ms;
+    }
+  }
+  &__check {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include flexbox;
+    @include rounded-right;
+    height: 100%;
+    width: 60px;
+    background-color: $tertiary-color;
+    color: #fff;
+    font-size: 20px;
+    opacity: 0;
+    transform-origin: right;    
+  }
+}
+
+// Card Animation
+@mixin card-animation {
+  transition: transform 400ms; 
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+  }
+  &:active {
+    transform: scale(.98);
+  } 
+}

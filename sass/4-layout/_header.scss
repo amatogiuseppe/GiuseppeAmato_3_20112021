@@ -16,5 +16,12 @@ header {
   }
   .fas {
     color: $hard-accent-color;
-  }
+    &:hover {
+      cursor: pointer;
+      color: $primary-color;
+    }
+    &:active {
+      color: $primary-color;
+    }
+  }  
 }

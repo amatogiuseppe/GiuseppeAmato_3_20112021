@@ -33,7 +33,7 @@
     width: auto; 
   } 
   &__heart {
-    @include progress-heart;
+    @include heart-animation;
     padding-right: 20px;    
   }  
 }
@@ -43,7 +43,7 @@
   background-color: $back-color;
   @include flexbox ($direction: column);
   &__btn {
-    margin: 30px 0 58px 0;
+    margin: 10px 0 80px 0;
     width: 185px;    
   }
 }
@@ -59,6 +59,7 @@
   min-inline-size: auto;
   border: none;
   padding: 0;
+  margin-bottom: 25px;
   @include large { 
     max-width: 33.33%;
   } 

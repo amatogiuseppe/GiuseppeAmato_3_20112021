@@ -23,7 +23,13 @@
       width: 100%;
     }
     a {
-      color: #fff;      
+      color: #fff;
+      &:hover {
+        color: $secondary-color;
+      }
+      &:active {
+        color: $secondary-color;
+      }          
     }
   }
   &__icon {    

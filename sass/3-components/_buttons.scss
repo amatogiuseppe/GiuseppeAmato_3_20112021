@@ -6,36 +6,18 @@
 
 /* --------- Default Buttons ---------- */
 .default-btn {
-  width: 220px;
-  height: 50px;
-  font: 400 16px "Roboto", Arial, sans-serif;
-  border: none;
-  border-radius: 35px;
-  color: #fff;
-  background: $primary-color;
+  @include default-btn-style;
   background: linear-gradient(to top, $primary-color, $secondary-color);
-  box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
-  &:hover {
-    background: linear-gradient(to top, lighten($primary-color, 1.5%), lighten($secondary-color, 1.5%));
-    box-shadow: 0 5px 5px rgba(0, 0, 0, .28);
-    cursor: pointer;
-  }
-  &:active {
-    background: linear-gradient(to top, lighten($primary-color, 1.5%), lighten($secondary-color, 1.5%));
-    box-shadow: 0 5px 5px rgba(0, 0, 0, .28);
-  }
+  @include default-btn-animation;
 }
 
 /* ----- Fonctionnement Buttons ------- */
 .step-btn {
-  @include flexbox ($justify: flex-start);
+  @include step-btn-style;
   width: 87%;
-  height: 75px;
-  position: relative;    
-  padding-left: 6px;   
-  background-color: $back-color;
-  border-radius: 25px;
+  background-color: $back-color;  
   box-shadow: 0 5px 8px lighten($base-color, 89.7%);  
+  @include step-btn-animation;
   &__title {
     text-align: center;
     width: 60%;  
@@ -50,7 +32,7 @@
     font-size: 14px;
     position: absolute;
     left: -10px;
-    z-index: 1;
+    z-index: 2;
   }
   &__icon {
     font-size: 16px;
@@ -64,20 +46,7 @@
     &--size-2 {
       font-size: 18px;
     }
-  }     
-  &:hover {
-    background-color: #f5edff;
-    cursor: pointer;
-    .step-btn__icon {
-      color: $primary-color;
-    }
   }
-  &:active {
-    background-color: #f5edff;
-    .step-btn__icon {
-      color: $primary-color;
-    }
-  }  
 }
 
 /* --------- Command Buttons ---------- */
@@ -86,19 +55,9 @@
   border-radius: 15px;
   padding: 9px;
   margin: 0 15px 15px 15px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
-  position: relative;
-  transition-duration: 500ms;
-  animation: progress-fieldset 1000ms both;  
-  &:nth-of-type(2) {
-    animation-delay: 200ms;
-  }
-  &:nth-of-type(3) {
-    animation-delay: 300ms;
-  }
-  &:nth-of-type(4) {
-    animation-delay: 400ms;
-  }
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);    
+  @include command-btn-rise-up-animation;
+  @include command-btn-check-animation;
   &__title {
     margin: 2px;
     font-size: 18px;
@@ -117,43 +76,6 @@
     }
     p:first-child {
       width: 83.7%;
-    }
-  }
-  &__check {
-    position: absolute;
-    top: 0;
-    right: 0;
-    @include flexbox;
-    @include rounded-right;
-    height: 100%;
-    width: 60px;
-    background-color: $tertiary-color;
-    color: #fff;
-    font-size: 20px;
-    opacity: 0;
-    transform-origin: right;    
-  }
-  &:hover {
-    cursor: pointer;
-    padding-right: 69px;    
-    .command-btn__check {
-      opacity: 1;
-      animation: progress-command-check 500ms;      
-    }
-    .fa-check-circle {      
-      transform: rotate(360deg);
-      transition-duration: 500ms;
-    }
-  }
-  &:active {    
-    padding-right: 69px;    
-    .command-btn__check {
-      opacity: 1;
-      animation: progress-command-check 500ms;      
-    }
-    .fa-check-circle {      
-      transform: rotate(360deg);
-      transition-duration: 500ms;
     }
   }
 }

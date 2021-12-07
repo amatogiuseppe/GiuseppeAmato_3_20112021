@@ -1,0 +1,61 @@
+/*
+  ========================================
+  Keyframes
+  ========================================
+*/
+
+/* Progress Heart */
+@keyframes progress-heart {
+  0% {
+    transform: scale(0);
+  }
+  85% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Progress Command Check */
+@keyframes progress-command-check {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Progress Rise up */
+@keyframes progress-rise-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {    
+    transform: translateY(0);
+  }
+}
+
+/* Loading Spinner */
+@keyframes loading-spinner {
+  60% {
+    opacity: 1;    
+  }
+  99% {
+    transform: scale(1);
+  }  
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+@keyframes rotation-spinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}
