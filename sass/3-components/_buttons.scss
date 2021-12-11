@@ -20,7 +20,8 @@
   @include step-btn-animation;
   &__title {
     text-align: center;
-    width: 60%;  
+    width: 60%;
+    font-weight: 700;  
   }  
   &__number {
     @include flexbox;
